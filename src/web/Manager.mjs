@@ -236,6 +236,7 @@ class Manager {
         this.addDynamicListener(".option-item input[type=number]", "change", this.options.numberChange, this.options);
         this.addDynamicListener(".option-item select", "change", this.options.selectChange, this.options);
         document.getElementById("theme").addEventListener("change", this.options.themeChange.bind(this.options));
+        document.getElementById("language").addEventListener("change", this.options.languageChange.bind(this.options));
         document.getElementById("logLevel").addEventListener("change", this.options.logLevelChange.bind(this.options));
 
         // Misc

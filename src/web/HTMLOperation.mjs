@@ -5,6 +5,7 @@
  */
 
 import HTMLIngredient from "./HTMLIngredient.mjs";
+import I18n from "../core/lib/I18n.mjs";
 import Utils from "../core/Utils.mjs";
 import url from "url";
 
@@ -26,8 +27,9 @@ class HTMLOperation {
         this.app         = app;
         this.manager     = manager;
 
-        this.name        = name;
-        this.description = config.description;
+        const nameKey    = name.toLowerCase().replace(/[\s/\-.]+/g, "_");
+        this.name        = I18n.t("op.name." + nameKey);
+        this.description = I18n.t("op.desc." + nameKey);
         this.infoURL     = config.infoURL;
         this.manualBake  = config.manualBake || false;
         this.config      = config;
@@ -63,7 +65,7 @@ class HTMLOperation {
                 data-boundary='viewport' role='button'`;
         }
 
-        html += ">" + this.name;
+        html += `" data-i18n="op.name.${this.name.toLowerCase().replace(/[\s/\-.]+/g, "_")}">${Utils.escapeHtml(this.name)}`;
 
         if (removeIcon) {
             html += "<i class='material-icons remove-icon op-icon'>delete</i>";
@@ -81,7 +83,8 @@ class HTMLOperation {
      * @returns {string}
      */
     toFullHtml() {
-        let html = `<div class="op-title">${Utils.escapeHtml(this.name)}</div>
+        const nameKey = this.name.toLowerCase().replace(/[\s/\-.]+/g, "_");
+        let html = `<div class="op-title" data-i18n="op.name.${nameKey}">${Utils.escapeHtml(this.name)}</div>
         <div class="ingredients">`;
 
         for (let i = 0; i < this.ingList.length; i++) {
@@ -90,9 +93,9 @@ class HTMLOperation {
 
         html += `</div>
         <div class="recip-icons">
-            <i class="material-icons breakpoint" title="Set breakpoint" break="false" data-help-title="Setting breakpoints" data-help="Setting a breakpoint on an operation will cause execution of the Recipe to pause when it reaches that operation.">pause</i>
-            <i class="material-icons disable-icon" title="Disable operation" disabled="false" data-help-title="Disabling operations" data-help="Disabling an operation will prevent it from being executed when the Recipe is baked. Execution will skip over the disabled operation and continue with subsequent operations.">not_interested</i>
-            <i class="material-icons hide-args-icon" title="Hide operation's arguments" hide-args="false" data-help-title="Hide operation's arguments" data-help="Hiding an operation's argument will save space in the Recipe window. Execution will still take place with the selected argument options.">keyboard_arrow_up</i>
+            <i class="material-icons breakpoint" data-i18n-title="ui.html_operation.set_breakpoint" title="Set breakpoint" break="false" data-help-title="Setting breakpoints" data-help="Setting a breakpoint on an operation will cause execution of the Recipe to pause when it reaches that operation.">pause</i>
+            <i class="material-icons disable-icon" data-i18n-title="ui.html_operation.disable_operation" title="Disable operation" disabled="false" data-help-title="Disabling operations" data-help="Disabling an operation will prevent it from being executed when the Recipe is baked. Execution will skip over the disabled operation and continue with subsequent operations.">not_interested</i>
+            <i class="material-icons hide-args-icon" data-i18n-title="ui.html_operation.hide_args" title="Hide operation's arguments" hide-args="false" data-help-title="Hide operation's arguments" data-help="Hiding an operation's argument will save space in the Recipe window. Execution will still take place with the selected argument options.">keyboard_arrow_up</i>
         </div>
         <div class="clearfix">&nbsp;</div>`;
 

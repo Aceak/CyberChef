@@ -8,6 +8,7 @@
 import LoaderWorker from "worker-loader?inline=no-fallback!../workers/LoaderWorker.js";
 import InputWorker from "worker-loader?inline=no-fallback!../workers/InputWorker.mjs";
 import Utils, {debounce} from "../../core/Utils.mjs";
+import I18n from "../../core/lib/I18n.mjs";
 import {toBase64} from "../../core/lib/Base64.mjs";
 import cptable from "codepage";
 
@@ -200,7 +201,7 @@ class InputWaiter {
 
         if (this.eolState === 1) {
             // Alert
-            this.app.alert(`Input end of line separator has been detected and changed to ${eolCodeToName[eol]}`, 5000);
+            this.app.alert(I18n.t("messages.eol_detected", {eol: eolCodeToName[eol]}), 5000);
         }
 
         // Update the EOL value
@@ -299,7 +300,7 @@ class InputWaiter {
             if (longest > lineLengthThreshold) {
                 // If we are exceeding the max line length, turn off word wrap
                 wrap = false;
-                this.app.alert("Maximum line length exceeded. Word wrap will be temporarily disabled to improve performance.", 20000);
+                this.app.alert(I18n.t("messages.max_line_length"), 20000);
             }
         }
 

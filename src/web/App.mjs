@@ -6,6 +6,7 @@
 
 import Utils, { debounce } from "../core/Utils.mjs";
 import {fromBase64} from "../core/lib/Base64.mjs";
+import I18n from "../core/lib/I18n.mjs"; // i18n support — see src/core/lib/I18n.mjs
 import Manager from "./Manager.mjs";
 import HTMLCategory from "./HTMLCategory.mjs";
 import HTMLOperation from "./HTMLOperation.mjs";
@@ -69,7 +70,13 @@ class App {
         this.initialiseSplitter();
         this.loadLocalStorage();
         this.manager.options.applyPreferredColorScheme();
+
+        // Initialise i18n before building the operations list so that
+        // HTMLOperation/HTMLCategory constructors resolve translated names
+        I18n.init(this.options.language || "en");
+
         this.populateOperationsList();
+        I18n.applyToDOM(); // Apply translations to the initial DOM
         this.manager.setup();
         this.manager.output.saveBombe();
         this.adjustComponentSizes();
@@ -114,6 +121,10 @@ class App {
 
         // Remove the loading error handler
         window.removeEventListener("error", window.loadingErrorHandler);
+
+        // Re-apply i18n for any elements that were added dynamically after
+        // the initial setup (e.g. recipe items, worker-loaded content)
+        I18n.applyToDOM();
 
         document.dispatchEvent(this.manager.apploaded);
 
@@ -401,8 +412,7 @@ class App {
             if (favourites[i] in this.operations) {
                 validFavs.push(favourites[i]);
             } else {
-                this.alert(`The operation "${Utils.escapeHtml(favourites[i])}" is no longer available. ` +
-                    "It has been removed from your favourites.");
+                this.alert(I18n.t("messages.op_not_available", {op: Utils.escapeHtml(favourites[i])}));
             }
         }
         return validFavs;
@@ -417,7 +427,7 @@ class App {
     saveFavourites(favourites) {
         if (!this.isLocalStorageAvailable()) {
             this.alert(
-                "Your security settings do not allow access to local storage so your favourites cannot be saved.",
+                I18n.t("messages.local_storage_unavailable_fav"),
                 5000
             );
             return false;
@@ -448,7 +458,7 @@ class App {
         const favourites = JSON.parse(localStorage.favourites);
 
         if (favourites.indexOf(name) >= 0) {
-            this.alert(`'${name}' is already in your favourites`, 3000);
+            this.alert(I18n.t("messages.already_in_favourites", {name: name}), 3000);
             return;
         }
 

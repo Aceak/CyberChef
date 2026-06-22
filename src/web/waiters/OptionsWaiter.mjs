@@ -4,6 +4,8 @@
  * @license Apache-2.0
  */
 
+import I18n from "../../core/lib/I18n.mjs";
+
 /**
  * Waiter to handle events related to the CyberChef options.
  */
@@ -189,6 +191,17 @@ class OptionsWaiter {
     getPreferredColorScheme() {
         const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
         return prefersDarkScheme ? "dark" : "classic";
+    }
+
+    /**
+     * Language change event listener
+     *
+     * @param {Event} e
+     */
+    async languageChange(e) {
+        const locale = e.target.value;
+        if (locale === I18n.locale) return;
+        await I18n.changeLanguage(locale);
     }
 
     /**

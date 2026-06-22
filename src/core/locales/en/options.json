@@ -1,0 +1,18 @@
+{
+    "theme": "Theme (only supported in modern browsers)",
+    "log_level": "Console logging level",
+    "update_url": "Update the URL when the input or recipe changes",
+    "show_highlighter": "Highlight selected bytes in output and input (when possible)",
+    "word_wrap": "Word wrap the input and output",
+    "show_errors": "Show errors from operations (recommended)",
+    "error_timeout": "Operation error timeout in ms (0 for never)",
+    "use_meta_key": "Use meta key for keybindings (Windows ⌓/Command ⌘)",
+    "auto_magic": "Attempt to detect encoded data automagically",
+    "image_preview": "Render a preview of the input if it's detected to be an image",
+    "sync_tabs": "Keep the current tab in sync between the input and output",
+    "show_cat_count": "Show the number of operations in each category",
+    "language": "Language",
+    "reset": "Reset options to default",
+    "close": "Close",
+    "persist_notice": "Please note that these options will persist between sessions."
+}

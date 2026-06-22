@@ -1,0 +1,19 @@
+{
+    "favourites": "Favourites",
+    "data_format": "Data format",
+    "encryption_encoding": "Encryption / Encoding",
+    "public_key": "Public Key",
+    "arithmetic_logic": "Arithmetic / Logic",
+    "networking": "Networking",
+    "language": "Language",
+    "utils": "Utils",
+    "date_time": "Date / Time",
+    "extractors": "Extractors",
+    "compression": "Compression",
+    "hashing": "Hashing",
+    "code_tidy": "Code tidy",
+    "forensics": "Forensics",
+    "multimedia": "Multimedia",
+    "other": "Other",
+    "flow_control": "Flow control"
+}

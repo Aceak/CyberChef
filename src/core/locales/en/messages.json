@@ -1,0 +1,16 @@
+{
+    "op_not_available": "The operation \"{{op}}\" is no longer available. It has been removed from your favourites.",
+    "local_storage_unavailable_fav": "Your security settings do not allow access to local storage so your favourites cannot be saved.",
+    "local_storage_unavailable_recipe": "Your security settings do not allow access to local storage so your recipe cannot be saved.",
+    "already_in_favourites": "'{{name}}' is already in your favourites",
+    "please_enter_recipe_name": "Please enter a recipe name",
+    "recipe_saved": "Recipe saved as \"{{name}}\".",
+    "invalid_recipe": "Invalid recipe",
+    "eol_detected": "Input end of line separator has been detected and changed to {{eol}}",
+    "max_line_length": "Maximum line length exceeded. Word wrap will be temporarily disabled to improve performance.",
+    "internet_explorer_warning": "Internet Explorer is not supported, please use Firefox or Chrome instead",
+    "js_disabled": "JavaScript is not enabled. Good luck.",
+    "input_output": "Input & Output",
+    "download_cyberchef": "Download CyberChef",
+    "options_settings": "Options and Settings"
+}

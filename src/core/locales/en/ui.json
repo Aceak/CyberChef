@@ -1,0 +1,152 @@
+{
+    "banner": {
+        "download": "Download CyberChef",
+        "options": "Options",
+        "about_support": "About / Support"
+    },
+
+    "operations": {
+        "title": "Operations",
+        "search_placeholder": "Search..."
+    },
+
+    "recipe": {
+        "title": "Recipe",
+        "hide_args": "Hide arguments",
+        "show_args": "Show arguments",
+        "save": "Save recipe",
+        "load": "Load recipe",
+        "clear": "Clear recipe"
+    },
+
+    "controls": {
+        "step": "Step",
+        "bake": "Bake!",
+        "cancel": "Cancel",
+        "loading": "Loading...",
+        "auto_bake": "Auto Bake"
+    },
+
+    "input": {
+        "title": "Input",
+        "add_tab": "Add a new input tab",
+        "open_folder": "Open folder as input",
+        "open_file": "Open file as input",
+        "clear_io": "Clear input and output",
+        "reset_layout": "Reset pane layout"
+    },
+
+    "output": {
+        "title": "Output",
+        "save_all": "Save all outputs to a zip file",
+        "save": "Save output to file",
+        "copy": "Copy raw output to the clipboard",
+        "switch": "Replace input with output",
+        "maximise": "Maximise output pane"
+    },
+
+    "modal": {
+        "save_recipe": "Save recipe",
+        "load_recipe": "Load recipe",
+        "options": "Options",
+        "edit_favourites": "Edit Favourites",
+        "about_support": "CyberChef - The Cyber Swiss Army Knife",
+        "download_cyberchef": "Download CyberChef",
+        "find_input_tab": "Find Input Tab",
+        "find_output_tab": "Find Output Tab"
+    },
+
+    "save_modal": {
+        "chef_format": "Chef format",
+        "clean_json": "Clean JSON",
+        "compact_json": "Compact JSON",
+        "recipe_name": "Recipe name",
+        "save_hint": "Save your recipe to local storage using this name, or copy it to load later",
+        "save": "Save",
+        "done": "Done",
+        "deep_link": "Deep link",
+        "include_recipe": "Include recipe",
+        "include_input": "Include input"
+    },
+
+    "load_modal": {
+        "recipe_name": "Recipe name",
+        "load_hint": "Load your recipe from local storage by selecting its name from the drop-down",
+        "recipe": "Recipe",
+        "paste_hint": "Load your recipe by pasting it into this box",
+        "load": "Load",
+        "delete": "Delete",
+        "cancel": "Cancel"
+    },
+
+    "favourites_modal": {
+        "to_add": "To add:",
+        "to_reorder": "To reorder:",
+        "to_remove": "To remove:",
+        "add_help": "drag the operation over the favourites category and drop it",
+        "reorder_help": "drag up and down in the list below",
+        "remove_help": "hit the delete button or drag out of the list below",
+        "reset": "Reset favourites to default",
+        "save": "Save",
+        "cancel": "Cancel"
+    },
+
+    "support_modal": {
+        "faqs": "FAQs",
+        "report_bug": "Report a bug",
+        "about": "About",
+        "keybindings": "Keybindings"
+    },
+
+    "confirm": {
+        "yes": "Yes",
+        "no": "No"
+    },
+
+    "help": {
+        "ok": "Ok"
+    },
+
+    "tabs": {
+        "go_to_tab": "Go to tab",
+        "find_tab": "Find tab",
+        "close_all": "Close all tabs"
+    },
+
+    "find_tab": {
+        "load_status": "Load Status",
+        "bake_status": "Bake Status",
+        "pending": "Pending",
+        "loading": "Loading",
+        "loaded": "Loaded",
+        "baking": "Baking",
+        "baked": "Baked",
+        "stale": "Stale",
+        "errored": "Errored",
+        "filter": "Filter (regex)",
+        "content_filter": "Content filter (regex)",
+        "num_results": "Number of results",
+        "results": "Results",
+        "refresh": "Refresh",
+        "close": "Close"
+    },
+
+    "html_operation": {
+        "set_breakpoint": "Set breakpoint",
+        "disable_operation": "Disable operation",
+        "hide_args": "Hide operation's arguments"
+    },
+
+    "status_bar": {
+        "detected": "(detected)",
+        "length": "{{label}} length",
+        "num_lines": "Number of lines",
+        "main_selection": "Main selection",
+        "cursor_offset": "Cursor offset",
+        "selected": "selected",
+        "baking_time": "Baking time",
+        "eol_sequence": "End of line sequence",
+        "raw_bytes": "Raw Bytes",
+        "filter_placeholder": "Filter..."
+    }
+}

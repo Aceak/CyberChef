@@ -5,6 +5,7 @@
  */
 
 import Utils from "../../core/Utils.mjs";
+import I18n from "../../core/lib/I18n.mjs";
 import { eolSeqToCode } from "../utils/editorUtils.mjs";
 
 
@@ -246,7 +247,7 @@ class ControlsWaiter {
     saveButtonClick() {
         if (!this.app.isLocalStorageAvailable()) {
             this.app.alert(
-                "Your security settings do not allow access to local storage so your recipe cannot be saved.",
+                I18n.t("messages.local_storage_unavailable_recipe"),
                 5000
             );
             return false;
@@ -256,7 +257,7 @@ class ControlsWaiter {
         const recipeStr  = document.querySelector("#save-texts .tab-pane.active textarea").value;
 
         if (!recipeName) {
-            this.app.alert("Please enter a recipe name", 3000);
+            this.app.alert(I18n.t("messages.please_enter_recipe_name"), 3000);
             return;
         }
 
@@ -273,7 +274,7 @@ class ControlsWaiter {
         localStorage.savedRecipes = JSON.stringify(savedRecipes);
         localStorage.recipeId = recipeId;
 
-        this.app.alert(`Recipe saved as "${recipeName}".`, 3000);
+        this.app.alert(I18n.t("messages.recipe_saved", {name: recipeName}), 3000);
     }
 
 
@@ -357,7 +358,7 @@ class ControlsWaiter {
 
             $("#rec-list [data-toggle=popover]").popover();
         } catch (e) {
-            this.app.alert("Invalid recipe", 2000);
+            this.app.alert(I18n.t("messages.invalid_recipe"), 2000);
         }
     }
 
@@ -370,7 +371,7 @@ class ControlsWaiter {
 
         if (icon.getAttribute("hide-args") === "false") {
             icon.setAttribute("hide-args", "true");
-            icon.setAttribute("data-original-title", "Show arguments");
+            icon.setAttribute("data-original-title", I18n.t("ui.recipe.show_args"));
             icon.children[0].innerText = "keyboard_arrow_down";
             Array.from(document.getElementsByClassName("hide-args-icon")).forEach(function(item) {
                 item.setAttribute("hide-args", "true");
@@ -380,7 +381,7 @@ class ControlsWaiter {
             });
         } else {
             icon.setAttribute("hide-args", "false");
-            icon.setAttribute("data-original-title", "Hide arguments");
+            icon.setAttribute("data-original-title", I18n.t("ui.recipe.hide_args"));
             icon.children[0].innerText = "keyboard_arrow_up";
             Array.from(document.getElementsByClassName("hide-args-icon")).forEach(function(item) {
                 item.setAttribute("hide-args", "false");
@@ -516,21 +517,21 @@ ${navigator.userAgent}
 
         switch (func) {
             case "cancel":
-                btnText.innerText = "Cancel";
+                btnText.innerText = I18n.t("ui.controls.cancel");
                 bakeButton.classList.remove("btn-success");
                 bakeButton.classList.remove("btn-warning");
                 bakeButton.classList.add("btn-danger");
                 break;
             case "loading":
                 bakeButton.style.background = "";
-                btnText.innerText = "Loading...";
+                btnText.innerText = I18n.t("ui.controls.loading");
                 bakeButton.classList.remove("btn-success");
                 bakeButton.classList.remove("btn-danger");
                 bakeButton.classList.add("btn-warning");
                 break;
             default:
                 bakeButton.style.background = "";
-                btnText.innerText = "Bake!";
+                btnText.innerText = I18n.t("ui.controls.bake");
                 bakeButton.classList.remove("btn-danger");
                 bakeButton.classList.remove("btn-warning");
                 bakeButton.classList.add("btn-success");

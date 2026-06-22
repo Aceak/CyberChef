@@ -4,6 +4,8 @@
  * @license Apache-2.0
  */
 
+import I18n from "../core/lib/I18n.mjs";
+
 /**
  * Object to handle the creation of operation categories.
  */
@@ -16,7 +18,8 @@ class HTMLCategory {
      * @param {boolean} selected - Whether this category is pre-selected or not.
      */
     constructor(name, selected) {
-        this.name = name;
+        const catKey = name.toLowerCase().replace(/[\s/\-.]+/g, "_");
+        this.name = I18n.t("cat." + catKey);
         this.selected = selected;
         this.opList = [];
     }
@@ -38,9 +41,10 @@ class HTMLCategory {
      * @returns {string}
      */
     toHtml() {
+        const catKey = this.name.toLowerCase().replace(/[\s/\-.]+/g, "_");
         const catName = "cat" + this.name.replace(/[\s/\-:_]/g, "");
         let html = `<div class="panel category">
-        <a class="category-title" data-toggle="collapse" data-target="#${catName}">
+        <a class="category-title" data-toggle="collapse" data-target="#${catName}" data-i18n="cat.${catKey}">
             ${this.name}
             <span class="op-count hidden">
                 ${this.opList.length}

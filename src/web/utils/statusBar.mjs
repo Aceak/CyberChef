@@ -6,6 +6,7 @@
 
 import {showPanel} from "@codemirror/view";
 import {CHR_ENC_SIMPLE_LOOKUP, CHR_ENC_SIMPLE_REVERSE_LOOKUP} from "../../core/lib/ChrEnc.mjs";
+import I18n from "../../core/lib/I18n.mjs";
 import { eolCodeToName, eolSeqToCode } from "./editorUtils.mjs";
 
 /**
@@ -224,8 +225,8 @@ class StatusBarPanel {
         switch (this.getEOLState()) {
             case 1: // Detected
                 val.classList.add("font-italic");
-                eolCode += " (detected)";
-                eolName += " (detected)";
+                eolCode += " " + I18n.t("ui.status_bar.detected");
+                eolName += " " + I18n.t("ui.status_bar.detected");
                 // Pulse
                 val.classList.add("pulse");
                 setTimeout(() => {
@@ -253,7 +254,7 @@ class StatusBarPanel {
         const chrEncVal = this.chrEncGetter();
         if (this.getEncodingState() < 2 && chrEncVal === this.chrEncVal) return;
 
-        let name = CHR_ENC_SIMPLE_REVERSE_LOOKUP[chrEncVal] ? CHR_ENC_SIMPLE_REVERSE_LOOKUP[chrEncVal] : "Raw Bytes";
+        let name = CHR_ENC_SIMPLE_REVERSE_LOOKUP[chrEncVal] ? CHR_ENC_SIMPLE_REVERSE_LOOKUP[chrEncVal] : I18n.t("ui.status_bar.raw_bytes");
 
         const val = this.dom.querySelector(".chr-enc-value");
         const button = val.closest(".cm-status-bar-select-btn");
@@ -261,7 +262,7 @@ class StatusBarPanel {
         switch (this.getEncodingState()) {
             case 1: // Detected
                 val.classList.add("font-italic");
-                name += " (detected)";
+                name += " " + I18n.t("ui.status_bar.detected");
                 // Pulse
                 val.classList.add("pulse");
                 setTimeout(() => {

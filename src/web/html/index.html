@@ -148,7 +148,7 @@
         <div tabindex="0" id="content-wrapper">
             <div id="banner" class="row">
                 <div class="col" style="text-align: left; padding-left: 10px;">
-                    <a href="#" data-toggle="modal" data-target="#download-modal" data-help-title="Downloading CyberChef" data-help="<p>CyberChef can be downloaded to run locally or hosted within your own network. It has no server-side component so all that is required is that the ZIP file is uncompressed and the files are accessible.</p><p>As a user, it is worth noting that unofficial versions of CyberChef could have been modified to introduce Input and/or Recipe exfiltration. We recommend always using the official, open source, up-to-date version of CyberChef hosted at <a href='https://gchq.github.io/CyberChef'>https://gchq.github.io/CyberChef</a> if accessible.</p><p>The Network tab in your browser's Developer console (F12) can be used to inspect the network requests made by a website. This can confirm that no data is uploaded when a CyberChef recipe is baked.</p>">Download CyberChef <i class="material-icons">file_download</i></a>
+                    <a href="#" data-toggle="modal" data-target="#download-modal" data-i18n="ui.banner.download" data-help-title="Downloading CyberChef" data-help="<p>CyberChef can be downloaded to run locally or hosted within your own network. It has no server-side component so all that is required is that the ZIP file is uncompressed and the files are accessible.</p><p>As a user, it is worth noting that unofficial versions of CyberChef could have been modified to introduce Input and/or Recipe exfiltration. We recommend always using the official, open source, up-to-date version of CyberChef hosted at <a href='https://gchq.github.io/CyberChef'>https://gchq.github.io/CyberChef</a> if accessible.</p><p>The Network tab in your browser's Developer console (F12) can be used to inspect the network requests made by a website. This can confirm that no data is uploaded when a CyberChef recipe is baked.</p>">Download CyberChef <i class="material-icons">file_download</i></a>
                 </div>
                 <div class="col-md-6" id="notice-wrapper">
                     <span id="notice">
@@ -163,35 +163,35 @@
                     </span>
                 </div>
                 <div class="col" style="text-align: right; padding-right: 0;">
-                    <a href="#" id="options" data-help-title="Options and Settings" data-help="Configurable options to change how CyberChef behaves. These settings are stored in your browser's local storage, meaning they will persist between sessions that use the same browser profile.">Options <i class="material-icons">settings</i></a>
-                    <a href="#" id="support" data-toggle="modal" data-target="#support-modal" data-help-title="About / Support" data-help="This pane provides information about the CyberChef web app, how to use some of the features, and how to raise bug reports.">About / Support <i class="material-icons">help</i></a>
+                    <a href="#" id="options" data-i18n="ui.banner.options" data-help-title="Options and Settings" data-help="Configurable options to change how CyberChef behaves. These settings are stored in your browser's local storage, meaning they will persist between sessions that use the same browser profile.">Options <i class="material-icons">settings</i></a>
+                    <a href="#" id="support" data-toggle="modal" data-target="#support-modal" data-i18n="ui.banner.about_support" data-help-title="About / Support" data-help="This pane provides information about the CyberChef web app, how to use some of the features, and how to raise bug reports.">About / Support <i class="material-icons">help</i></a>
                 </div>
             </div>
             <div id="workspace-wrapper">
                 <div id="operations" class="split split-horizontal no-select">
-                    <div class="title no-select" data-help-title="Operations list" data-help="<p>The Operations list contains all the operations in CyberChef arranged into categories. Some operations may be present in multiple categories. You can search for operations using the search box.</p><p>To use an operation, either double click it, or drag it into the Recipe pane. You will then be able to configure its arguments (or 'Ingredients' in CyberChef terminology).</p>">
+                    <div class="title no-select" data-i18n="ui.operations.title" data-help-title="Operations list" data-help="<p>The Operations list contains all the operations in CyberChef arranged into categories. Some operations may be present in multiple categories. You can search for operations using the search box.</p><p>To use an operation, either double click it, or drag it into the Recipe pane. You will then be able to configure its arguments (or 'Ingredients' in CyberChef terminology).</p>">
                         Operations
                         <span class="op-count"></span>
                     </div>
-                    <input id="search" type="search" class="form-control" placeholder="Search..." autocomplete="off" tabindex="0" data-help-title="Searching for operations" data-help="<p>Use the search box to find useful operations.</p><p>Both operation names and descriptions are queried using a fuzzy matching algorithm.</p>" aria-owns="search-results">
+                    <input id="search" type="search" class="form-control" data-i18n-placeholder="ui.operations.search_placeholder" placeholder="Search..." autocomplete="off" tabindex="0" data-help-title="Searching for operations" data-help="<p>Use the search box to find useful operations.</p><p>Both operation names and descriptions are queried using a fuzzy matching algorithm.</p>" aria-owns="search-results">
                     <ul id="search-results" class="op-list"></ul>
                     <div id="categories" class="panel-group no-select"></div>
                 </div>
 
                 <div id="recipe" class="split split-horizontal no-select" data-help-title="Recipe pane" data-help="<p>The Recipe pane is where your chosen Operations are configured. If you are a programmer, think of these as functions. If you are not a programmer, these are like steps in a cake recipe. The Input data will be processed based on the Operations in your Recipe.</p><ul><li>To reorder, simply drag and drop the Operations into the order your require</li><li>To remove an operation, either double click it, or drag it outside of the Recipe pane</li></ul><p>The arguments (or 'Ingredients' in CyberChef terminology) can be configured to change how an Operation processes the data.</p>">
-                    <div class="title no-select">
+                    <div class="title no-select" data-i18n="ui.recipe.title">
                         Recipe
                         <span class="pane-controls hide-on-maximised-output">
-                            <button type="button" aria-label="Hide arguments" class="btn btn-primary bmd-btn-icon" id="hide-icon" data-toggle="tooltip" title="Hide arguments" hide-args="false" data-help-title="Hiding every Operation's argument view in a Recipe" data-help="Clicking 'Hide arguments' will hide all the argument views for every Operation in the Recipe, to save space when you have too many Operation in your Recipe">
+                            <button type="button" aria-label="Hide arguments" class="btn btn-primary bmd-btn-icon" id="hide-icon" data-toggle="tooltip" data-i18n-title="ui.recipe.hide_args" title="Hide arguments" hide-args="false" data-help-title="Hiding every Operation's argument view in a Recipe" data-help="Clicking 'Hide arguments' will hide all the argument views for every Operation in the Recipe, to save space when you have too many Operation in your Recipe">
                                 <i class="material-icons">keyboard_arrow_up</i>
                             </button>
-                            <button type="button" aria-label="Save recipe" class="btn btn-primary bmd-btn-icon" id="save" data-toggle="tooltip" title="Save recipe" data-help-title="Saving a recipe" data-help="<p>Recipes can be represented in a few different formats and saved for use at a later date. You can either copy the Recipe configuration and save it somewhere offline for later use, or use your browser's local storage.</p><ul><li><b>Deep link:</b> The easiest way to share a CyberChef Recipe is to copy the deep link, either from the address bar (which is updated as the Recipe or Input changes), or from the 'Save recipe' pane. When you visit this link, the Recipe and Input will be populated from where you left off.</li><li><b>Chef format:</b> This custom format is designed to be compact and easily readable. It is the format used in CyberChef's URL, so it largely uses characters that do not have to be escaped in URL encoding, making it a little easier to understand what a CyberChef URL contains.</li><li><b>Clean JSON:</b> This JSON format uses whitespace and indentation in a way that makes the Recipe easy to read.</li><li><b>Compact JSON:</b> This is the most compact way that the Recipe can be represented in JSON.</li><li><b>Local storage:</b> Alternatively, you can enter a name into the 'Recipe name' field and save to your browser's local storage. The Recipe will then be available to load from the 'Load Recipe' pane as long as you are using the same browser profile. Be aware that if your browser profile is cleaned, you may lose this data.</li></ul>">
+                            <button type="button" aria-label="Save recipe" class="btn btn-primary bmd-btn-icon" id="save" data-toggle="tooltip" data-i18n-title="ui.recipe.save" title="Save recipe" data-help-title="Saving a recipe" data-help="<p>Recipes can be represented in a few different formats and saved for use at a later date. You can either copy the Recipe configuration and save it somewhere offline for later use, or use your browser's local storage.</p><ul><li><b>Deep link:</b> The easiest way to share a CyberChef Recipe is to copy the deep link, either from the address bar (which is updated as the Recipe or Input changes), or from the 'Save recipe' pane. When you visit this link, the Recipe and Input will be populated from where you left off.</li><li><b>Chef format:</b> This custom format is designed to be compact and easily readable. It is the format used in CyberChef's URL, so it largely uses characters that do not have to be escaped in URL encoding, making it a little easier to understand what a CyberChef URL contains.</li><li><b>Clean JSON:</b> This JSON format uses whitespace and indentation in a way that makes the Recipe easy to read.</li><li><b>Compact JSON:</b> This is the most compact way that the Recipe can be represented in JSON.</li><li><b>Local storage:</b> Alternatively, you can enter a name into the 'Recipe name' field and save to your browser's local storage. The Recipe will then be available to load from the 'Load Recipe' pane as long as you are using the same browser profile. Be aware that if your browser profile is cleaned, you may lose this data.</li></ul>">
                                 <i class="material-icons" aria-hidden="true">save</i>
                             </button>
-                            <button type="button" aria-label="Load recipe" class="btn btn-primary bmd-btn-icon" id="load" data-toggle="tooltip" title="Load recipe" data-help-title="Loading a recipe" data-help="<p>Saved recipes can be loaded using one of the following methods:</p><ul><li>If you have a CyberChef deep link, simply visit that link and the Recipe and Input will be populated automatically.</li><li>If you have a Recipe string in any of the accepted formats, paste it into the 'Load recipe' pane textbox and click 'Load'.</li><li>If you have saved a Recipe to your browser's local storage, it should be available in the dropdown menu in the 'Load recipe' pane. If it is not there, you may not be using the same browser profile, or your profile may have been cleared.</li></ul>">
+                            <button type="button" aria-label="Load recipe" class="btn btn-primary bmd-btn-icon" id="load" data-toggle="tooltip" data-i18n-title="ui.recipe.load" title="Load recipe" data-help-title="Loading a recipe" data-help="<p>Saved recipes can be loaded using one of the following methods:</p><ul><li>If you have a CyberChef deep link, simply visit that link and the Recipe and Input will be populated automatically.</li><li>If you have a Recipe string in any of the accepted formats, paste it into the 'Load recipe' pane textbox and click 'Load'.</li><li>If you have saved a Recipe to your browser's local storage, it should be available in the dropdown menu in the 'Load recipe' pane. If it is not there, you may not be using the same browser profile, or your profile may have been cleared.</li></ul>">
                                 <i class="material-icons" aria-hidden="true">folder</i>
                             </button>
-                            <button type="button" aria-label="Clear recipe" class="btn btn-primary bmd-btn-icon" id="clr-recipe" data-toggle="tooltip" title="Clear recipe" data-help-title="Clearing a recipe" data-help="Clicking the 'Clear recipe' button will remove all operations from the Recipe. It will not clear the Input, but it will trigger a Bake if Auto-bake is turned on, which will change the value of the Output.">
+                            <button type="button" aria-label="Clear recipe" class="btn btn-primary bmd-btn-icon" id="clr-recipe" data-toggle="tooltip" data-i18n-title="ui.recipe.clear" title="Clear recipe" data-help-title="Clearing a recipe" data-help="Clicking the 'Clear recipe' button will remove all operations from the Recipe. It will not clear the Input, but it will trigger a Bake if Auto-bake is turned on, which will change the value of the Output.">
                                 <i class="material-icons" aria-hidden="true">delete</i>
                             </button>
                         </span>
@@ -200,20 +200,20 @@
 
                     <div id="controls" class="no-select hide-on-maximised-output">
                         <div id="controls-content">
-                            <button type="button" class="mx-2 btn btn-lg btn-secondary" id="step" data-toggle="tooltip" title="Step through the recipe" data-help-title="Stepping through the Recipe" data-help="<p>The Step button allows you to execute one operation at a time, rather than running the whole Recipe from beginning to end.</p><p>Step allows you to inspect the data at each stage of the Recipe and understand what is being passed to the next operation.</p>">
-                                Step
+                            <button type="button" class="mx-2 btn btn-lg btn-secondary" id="step" data-toggle="tooltip" data-i18n-title="ui.controls.step" title="Step through the recipe" data-help-title="Stepping through the Recipe" data-help="<p>The Step button allows you to execute one operation at a time, rather than running the whole Recipe from beginning to end.</p><p>Step allows you to inspect the data at each stage of the Recipe and understand what is being passed to the next operation.</p>">
+                                <span data-i18n="ui.controls.step">Step</span>
                             </button>
 
                             <button type="button" class="mx-2 btn btn-lg btn-success btn-raised btn-block" id="bake" data-help-title="Baking" data-help="<p>Baking causes CyberChef to run the Recipe against your data. This involves three steps:</p><ol><li>The data in the Input is encoded into bytes using the character encoding selected in the Input status bar.</li><li>The data is run through each of the operations in the Recipe in turn with the output of one operation being fed into the next operation as its input.</li><li>The outcome of the final operation in the Recipe is decoded into Output text using the character encoding selected in the Output status bar.</li></ol><p>If there are multiple Inputs, the Bake button causes every Input to be baked simultaneously.</p>">
                                 <img aria-hidden="true" src="<%- require('../static/images/cook_male-32x32.png') %>" alt="Chef Icon"/>
-                                <span>Bake!</span>
+                                <span data-i18n="ui.controls.bake">Bake!</span>
                             </button>
 
                             <div class="form-group" style="display: contents;">
                                 <div class="mx-1 checkbox" data-help-title="Auto-bake" data-help="<p>When Auto-bake is turned on, CyberChef will bake the Input using the Recipe whenever anything in the Input or Recipe changes.</p>This includes:<ul><li>Adding or removing operations</li><li>Modifying operation arguments</li><li>Editing the Input</li><li>Changing the Input character encoding</li></ul><p>If there are multiple inputs, only the currently active tab will be baked when Auto-bake triggers. You can bake all inputs manually using the Bake button.</p>">
                                     <label id="auto-bake-label">
                                         <input type="checkbox" checked="checked" id="auto-bake">
-                                        <br>Auto Bake
+                                        <br><span data-i18n="ui.controls.auto_bake">Auto Bake</span>
                                     </label>
                                 </div>
                             </div>
@@ -224,24 +224,24 @@
                 <div class="split split-horizontal" id="IO">
                     <div id="input" class="split no-select" data-help-title="Input pane" data-help="<p>Input data can be entered by typing it in, pasting it in, dragging it in, or using the 'Load file' or 'Load folder' buttons.</p><p>CyberChef does its best to represent data as accurately as possible to ensure you know exactly what you are working with. Non-printable characters are represented using control character pictures, for example a null byte (0x00) is displayed like this: <span title='Control character null' aria-label='Control character null' class='cm-specialChar'>␀</span>.</p>">
                         <div class="title no-select">
-                            <label for="input-text">Input</label>
+                            <label for="input-text" data-i18n="ui.input.title">Input</label>
                             <span class="pane-controls">
                                 <div class="io-info" id="input-files-info"></div>
-                                <button type="button" aria-label="Add new input tab" class="btn btn-primary bmd-btn-icon" id="btn-new-tab" data-toggle="tooltip" title="Add a new input tab" data-help-title="Tabs" data-help="<p>New tabs can be created to support multiple Inputs. These tabs have their own associated character encodings and EOL separators, as defined in their status bars.</p><p>The deep link in the URL bar only contains information about the currently active tab.</p>">
+                                <button type="button" aria-label="Add new input tab" class="btn btn-primary bmd-btn-icon" id="btn-new-tab" data-toggle="tooltip" data-i18n-title="ui.input.add_tab" title="Add a new input tab" data-help-title="Tabs" data-help="<p>New tabs can be created to support multiple Inputs. These tabs have their own associated character encodings and EOL separators, as defined in their status bars.</p><p>The deep link in the URL bar only contains information about the currently active tab.</p>">
                                     <i class="material-icons" aria-hidden="true">add</i>
                                 </button>
-                                <button type="button" aria-label="Open folder as input" class="btn btn-primary bmd-btn-icon" id="btn-open-folder" data-toggle="tooltip" title="Open folder as input" data-help-title="Opening a folder" data-help="<p>You can open a whole folder into CyberChef, which will result in each file being loaded into a separate Input tab.</p><p>CyberChef can handle lots of Input files, but be aware that performance may suffer, especially if the files are large in size.</p><p>Folders can also be loaded by dragging them over the Input pane and dropping them.</p>">
+                                <button type="button" aria-label="Open folder as input" class="btn btn-primary bmd-btn-icon" id="btn-open-folder" data-toggle="tooltip" data-i18n-title="ui.input.open_folder" title="Open folder as input" data-help-title="Opening a folder" data-help="<p>You can open a whole folder into CyberChef, which will result in each file being loaded into a separate Input tab.</p><p>CyberChef can handle lots of Input files, but be aware that performance may suffer, especially if the files are large in size.</p><p>Folders can also be loaded by dragging them over the Input pane and dropping them.</p>">
                                     <i class="material-icons" aria-hidden="true">folder_open</i>
                                     <input type="file" id="open-folder" style="display: none" multiple directory webkitdirectory>
                                 </button>
-                                <button type="button" aria-label="Open file as input" class="btn btn-primary bmd-btn-icon" id="btn-open-file" data-toggle="tooltip" title="Open file as input" data-help-title="Opening a file" data-help="<p>Files can be loaded into CyberChef individually or in groups, either using the 'Open file as input' button, or by dragging and dropping them over the Input pane.</p><p>CyberChef can handle reasonably large files (at least 500MB, depending on hardware), but performance may be impacted and some Operations will run very slowly over large Inputs.</p>">
+                                <button type="button" aria-label="Open file as input" class="btn btn-primary bmd-btn-icon" id="btn-open-file" data-toggle="tooltip" data-i18n-title="ui.input.open_file" title="Open file as input" data-help-title="Opening a file" data-help="<p>Files can be loaded into CyberChef individually or in groups, either using the 'Open file as input' button, or by dragging and dropping them over the Input pane.</p><p>CyberChef can handle reasonably large files (at least 500MB, depending on hardware), but performance may be impacted and some Operations will run very slowly over large Inputs.</p>">
                                     <i class="material-icons" aria-hidden="true">input</i>
                                     <input type="file" id="open-file" style="display: none" multiple>
                                 </button>
-                                <button type="button" aria-label="Clear input and output" class="btn btn-primary bmd-btn-icon" id="clr-io" data-toggle="tooltip" title="Clear input and output" data-help-title="Clearing the Input and Output" data-help="Clicking the 'Clear input and output' button will remove all Inputs and Outputs. It will not clear the Recipe.">
+                                <button type="button" aria-label="Clear input and output" class="btn btn-primary bmd-btn-icon" id="clr-io" data-toggle="tooltip" data-i18n-title="ui.input.clear_io" title="Clear input and output" data-help-title="Clearing the Input and Output" data-help="Clicking the 'Clear input and output' button will remove all Inputs and Outputs. It will not clear the Recipe.">
                                     <i class="material-icons" aria-hidden="true">delete</i>
                                 </button>
-                                <button type="button" aria-label="Reset pane layout" class="btn btn-primary bmd-btn-icon" id="reset-layout" data-toggle="tooltip" title="Reset pane layout" data-help-title="Resetting the pane layout" data-help="CyberChef's panes can be resized to suit your area of focus. This button will reset the pane sizes to their default configuration.">
+                                <button type="button" aria-label="Reset pane layout" class="btn btn-primary bmd-btn-icon" id="reset-layout" data-toggle="tooltip" data-i18n-title="ui.input.reset_layout" title="Reset pane layout" data-help-title="Resetting the pane layout" data-help="CyberChef's panes can be resized to suit your area of focus. This button will reset the pane sizes to their default configuration.">
                                     <i class="material-icons" aria-hidden="true">view_compact</i>
                                 </button>
                             </span>
@@ -256,13 +256,13 @@
                                     ···
                                 </span>
                                 <div class="dropdown-menu" aria-labelledby="btn-input-tab-dropdown">
-                                    <a id="btn-go-to-input-tab" class="dropdown-item">
+                                    <a id="btn-go-to-input-tab" class="dropdown-item" data-i18n="ui.tabs.go_to_tab">
                                         Go to tab
                                     </a>
-                                    <a id="btn-find-input-tab" class="dropdown-item">
+                                    <a id="btn-find-input-tab" class="dropdown-item" data-i18n="ui.tabs.find_tab">
                                         Find tab
                                     </a>
-                                    <a id="btn-close-all-tabs" class="dropdown-item">
+                                    <a id="btn-close-all-tabs" class="dropdown-item" data-i18n="ui.tabs.close_all">
                                         Close all tabs
                                     </a>
                                 </div>
@@ -278,22 +278,22 @@
 
                     <div id="output" class="split" data-help-title="Output pane" data-help="<p>This pane displays the results of the Recipe after it has processed your Input.</p><p>CyberChef does its best to represent data as accurately as possible to ensure you know exactly what you are working with. Non-printable characters are represented using control character pictures, for example a null byte (0x00) is displayed like this: <span title='Control character null' aria-label='Control character null' class='cm-specialChar'>␀</span>.</p><p>When copying these characters from the Output, the original byte value will be copied into your clipboard, rather than the control character picture itself.</p>">
                         <div class="title no-select">
-                            <label for="output-text">Output</label>
+                            <label for="output-text" data-i18n="ui.output.title">Output</label>
                             <span class="pane-controls">
                                 <div class="io-info" id="bake-info"></div>
-                                <button type="button" class="btn btn-primary bmd-btn-icon" id="save-all-to-file" data-toggle="tooltip" title="Save all outputs to a zip file" style="display: none" data-help-title="Saving all outputs to a zip file" data-help="<p>When operating with multiple tabbed Inputs and Outputs, you can use this button to save off all the Outputs at once in a ZIP file.</p><p>Use the 'Bake' button to bake all Inputs at once.</p><p>You will be given the choice to specify the file extension for the Outputs, or you can let CyberChef attempt to detect the filetype of each one. If an Output's type is not clear, CyberChef will use the '.dat' extension.</p>">
+                                <button type="button" class="btn btn-primary bmd-btn-icon" id="save-all-to-file" data-toggle="tooltip" data-i18n-title="ui.output.save_all" title="Save all outputs to a zip file" style="display: none" data-help-title="Saving all outputs to a zip file" data-help="<p>When operating with multiple tabbed Inputs and Outputs, you can use this button to save off all the Outputs at once in a ZIP file.</p><p>Use the 'Bake' button to bake all Inputs at once.</p><p>You will be given the choice to specify the file extension for the Outputs, or you can let CyberChef attempt to detect the filetype of each one. If an Output's type is not clear, CyberChef will use the '.dat' extension.</p>">
                                         <i class="material-icons">archive</i>
                                     </button>
-                                <button type="button" aria-label="save" class="btn btn-primary bmd-btn-icon" id="save-to-file" data-toggle="tooltip" title="Save output to file" data-help-title="Saving output to a file" data-help="The currently active Output can be saved to a file. You will be asked to specify a filename. CyberChef will attempt to guess the correct file extension based on the data. If a file type cannot be detected, the extension defaults to '.dat' but can be changed manually.">
+                                <button type="button" aria-label="save" class="btn btn-primary bmd-btn-icon" id="save-to-file" data-toggle="tooltip" data-i18n-title="ui.output.save" title="Save output to file" data-help-title="Saving output to a file" data-help="The currently active Output can be saved to a file. You will be asked to specify a filename. CyberChef will attempt to guess the correct file extension based on the data. If a file type cannot be detected, the extension defaults to '.dat' but can be changed manually.">
                                     <i class="material-icons" aria-hidden="true">save</i>
                                 </button>
-                                <button type="button" aria-label="copy content" class="btn btn-primary bmd-btn-icon" id="copy-output" data-toggle="tooltip" title="Copy raw output to the clipboard" data-help-title="Copying raw output to the clipboard" data-help="<p>Data can be copied from the Output in the normal way by selecting text and copying it. This button provides a quick way of copying the entire output to the clipboard without having to select it. It directly copies the raw data rather than selecting text in the Output editor. Each method will have the same result, but the button may be more efficient for large Outputs as it does not require any DOM interaction.</p>">
+                                <button type="button" aria-label="copy content" class="btn btn-primary bmd-btn-icon" id="copy-output" data-toggle="tooltip" data-i18n-title="ui.output.copy" title="Copy raw output to the clipboard" data-help-title="Copying raw output to the clipboard" data-help="<p>Data can be copied from the Output in the normal way by selecting text and copying it. This button provides a quick way of copying the entire output to the clipboard without having to select it. It directly copies the raw data rather than selecting text in the Output editor. Each method will have the same result, but the button may be more efficient for large Outputs as it does not require any DOM interaction.</p>">
                                     <i class="material-icons" aria-hidden="true">content_copy</i>
                                 </button>
-                                <button type="button" aria-label="replace input with output" class="btn btn-primary bmd-btn-icon" id="switch" data-toggle="tooltip" title="Replace input with output" data-help-title="Replacing input with output" data-help="<p>This button moves the currently active Output data into the currently active Input tab, overwriting whatever data was already there.</p><p>The Input character encoding and EOL sequence will be changed to match the current Output values, so that the data is interpreted correctly.</p>">
+                                <button type="button" aria-label="replace input with output" class="btn btn-primary bmd-btn-icon" id="switch" data-toggle="tooltip" data-i18n-title="ui.output.switch" title="Replace input with output" data-help-title="Replacing input with output" data-help="<p>This button moves the currently active Output data into the currently active Input tab, overwriting whatever data was already there.</p><p>The Input character encoding and EOL sequence will be changed to match the current Output values, so that the data is interpreted correctly.</p>">
                                     <i class="material-icons" aria-hidden="true">open_in_browser</i>
                                 </button>
-                                <button type="button" aria-label="maximise output pane" class="btn btn-primary bmd-btn-icon" id="maximise-output" data-toggle="tooltip" title="Maximise output pane" data-help-title="Maximising the Output pane" data-help="This button allows you to view the Output pane at maximum size, hiding the Operations, Recipe and Input panes. You can restore the pane to its normal size by clicking the same button again.">
+                                <button type="button" aria-label="maximise output pane" class="btn btn-primary bmd-btn-icon" id="maximise-output" data-toggle="tooltip" data-i18n-title="ui.output.maximise" title="Maximise output pane" data-help-title="Maximising the Output pane" data-help="This button allows you to view the Output pane at maximum size, hiding the Operations, Recipe and Input panes. You can restore the pane to its normal size by clicking the same button again.">
                                     <i class="material-icons" aria-hidden="true">fullscreen</i>
                                 </button>
                             </span>
@@ -317,10 +317,10 @@
                                     ···
                                 </span>
                                 <div class="dropdown-menu" aria-labelledby="btn-input-tab-dropdown">
-                                    <a id="btn-go-to-output-tab" class="dropdown-item">
+                                    <a id="btn-go-to-output-tab" class="dropdown-item" data-i18n="ui.tabs.go_to_tab">
                                         Go to tab
                                     </a>
-                                    <a id="btn-find-output-tab" class="dropdown-item">
+                                    <a id="btn-find-output-tab" class="dropdown-item" data-i18n="ui.tabs.find_tab">
                                         Find tab
                                     </a>
                                 </div>
@@ -347,19 +347,19 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content" data-help-proxy="#save">
                     <div class="modal-header">
-                        <h5 class="modal-title">Save recipe</h5>
+                        <h5 class="modal-title" data-i18n="ui.modal.save_recipe">Save recipe</h5>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" href="#chef-format" role="tab" data-toggle="tab">Chef format</a>
+                                    <a class="nav-link active" href="#chef-format" role="tab" data-toggle="tab" data-i18n="ui.save_modal.chef_format">Chef format</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#clean-json" role="tab" data-toggle="tab">Clean JSON</a>
+                                    <a class="nav-link" href="#clean-json" role="tab" data-toggle="tab" data-i18n="ui.save_modal.clean_json">Clean JSON</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#compact-json" role="tab" data-toggle="tab">Compact JSON</a>
+                                    <a class="nav-link" href="#compact-json" role="tab" data-toggle="tab" data-i18n="ui.save_modal.compact_json">Compact JSON</a>
                                 </li>
                             </ul>
                             <div class="tab-content" id="save-texts">
@@ -375,24 +375,24 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="save-name" class="bmd-label-floating">Recipe name</label>
+                            <label for="save-name" class="bmd-label-floating" data-i18n="ui.save_modal.recipe_name">Recipe name</label>
                             <input type="text" class="form-control" id="save-name">
-                            <span class="bmd-help">Save your recipe to local storage using this name, or copy it to load later</span>
+                            <span class="bmd-help" data-i18n="ui.save_modal.save_hint">Save your recipe to local storage using this name, or copy it to load later</span>
                         </div>
                     </div>
                     <div class="modal-footer" id="save-footer">
-                        <button type="button" class="btn btn-primary" id="save-button" data-dismiss="modal">Save</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Done</button>
+                        <button type="button" class="btn btn-primary" id="save-button" data-dismiss="modal" data-i18n="ui.save_modal.save">Save</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="ui.save_modal.done">Done</button>
                     </div>
                     <div class="modal-body">
                         <div class="form-group" id="save-link-group">
-                            <h6 style="display: inline">Deep link</h6>
+                            <h6 style="display: inline" data-i18n="ui.save_modal.deep_link">Deep link</h6>
                             <div class="save-link-options">
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="save-link-recipe-checkbox" checked> Include recipe
+                                    <input type="checkbox" id="save-link-recipe-checkbox" checked> <span data-i18n="ui.save_modal.include_recipe">Include recipe</span>
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="checkbox" id="save-link-input-checkbox" checked> Include input
+                                    <input type="checkbox" id="save-link-input-checkbox" checked> <span data-i18n="ui.save_modal.include_input">Include input</span>
                                 </label>
                             </div>
                             <br><br>
@@ -407,24 +407,24 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content" data-help-proxy="#load">
                     <div class="modal-header">
-                        <h5 class="modal-title">Load recipe</h5>
+                        <h5 class="modal-title" data-i18n="ui.modal.load_recipe">Load recipe</h5>
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label for="load-name" class="bmd-label-floating">Recipe name</label>
+                            <label for="load-name" class="bmd-label-floating" data-i18n="ui.load_modal.recipe_name">Recipe name</label>
                             <select class="form-control" id="load-name"></select>
-                            <span class="bmd-help">Load your recipe from local storage by selecting its name from the drop-down</span>
+                            <span class="bmd-help" data-i18n="ui.load_modal.load_hint">Load your recipe from local storage by selecting its name from the drop-down</span>
                         </div>
                         <div class="form-group">
-                            <label for="load-text" class="bmd-label-floating">Recipe</label>
+                            <label for="load-text" class="bmd-label-floating" data-i18n="ui.load_modal.recipe">Recipe</label>
                             <textarea class="form-control" id="load-text" rows="5"></textarea>
-                            <span class="bmd-help">Load your recipe by pasting it into this box</span>
+                            <span class="bmd-help" data-i18n="ui.load_modal.paste_hint">Load your recipe by pasting it into this box</span>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="load-button" data-dismiss="modal">Load</button>
-                        <button type="button" class="btn btn-danger" id="load-delete-button">Delete</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-primary" id="load-button" data-dismiss="modal" data-i18n="ui.load_modal.load">Load</button>
+                        <button type="button" class="btn btn-danger" id="load-delete-button" data-i18n="ui.load_modal.delete">Delete</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="ui.load_modal.cancel">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -434,13 +434,13 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content" data-help-proxy="#options">
                     <div class="modal-header">
-                        <h5 class="modal-title">Options</h5>
+                        <h5 class="modal-title" data-i18n="ui.modal.options">Options</h5>
                     </div>
                     <div class="modal-body" id="options-body">
-                        <p style="font-weight: bold">Please note that these options will persist between sessions.</p>
+                        <p style="font-weight: bold" data-i18n="options.persist_notice">Please note that these options will persist between sessions.</p>
 
                         <div class="form-group option-item">
-                            <label for="theme" class="bmd-label-floating"> Theme (only supported in modern browsers)</label>
+                            <label for="theme" class="bmd-label-floating" data-i18n="options.theme">Theme (only supported in modern browsers)</label>
                             <select class="form-control" option="theme" id="theme">
                                 <option value="classic">Classic</option>
                                 <option value="dark">Dark</option>
@@ -451,7 +451,14 @@
                         </div>
 
                         <div class="form-group option-item">
-                            <label for="logLevel" class="bmd-label-floating">Console logging level</label>
+                            <label for="language" class="bmd-label-floating" data-i18n="options.language">Language</label>
+                            <select class="form-control" option="language" id="language">
+                                <option value="en">English</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group option-item">
+                            <label for="logLevel" class="bmd-label-floating" data-i18n="options.log_level">Console logging level</label>
                             <select class="form-control" option="logLevel" id="logLevel">
                                 <option value="silent">Silent</option>
                                 <option value="error">Error</option>
@@ -465,74 +472,74 @@
                         <div class="checkbox option-item">
                             <label for="updateUrl">
                                 <input type="checkbox" option="updateUrl" id="updateUrl" checked>
-                                Update the URL when the input or recipe changes
+                                <span data-i18n="options.update_url">Update the URL when the input or recipe changes</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="showHighlighter">
                                 <input type="checkbox" option="showHighlighter" id="showHighlighter" checked>
-                                Highlight selected bytes in output and input (when possible)
+                                <span data-i18n="options.show_highlighter">Highlight selected bytes in output and input (when possible)</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="wordWrap">
                                 <input type="checkbox" option="wordWrap" id="wordWrap" checked>
-                                Word wrap the input and output
+                                <span data-i18n="options.word_wrap">Word wrap the input and output</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item mb-0">
                             <label for="showErrors">
                                 <input type="checkbox" option="showErrors" id="showErrors" checked>
-                                Show errors from operations (recommended)
+                                <span data-i18n="options.show_errors">Show errors from operations (recommended)</span>
                             </label>
                         </div>
 
                         <div class="form-group option-item">
-                            <label for="errorTimeout" class="bmd-label-floating">Operation error timeout in ms (0 for never)</label>
+                            <label for="errorTimeout" class="bmd-label-floating" data-i18n="options.error_timeout">Operation error timeout in ms (0 for never)</label>
                             <input type="number" class="form-control" option="errorTimeout" id="errorTimeout">
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="useMetaKey">
                                 <input type="checkbox" option="useMetaKey" id="useMetaKey">
-                                Use meta key for keybindings (Windows ⊞/Command ⌘)
+                                <span data-i18n="options.use_meta_key">Use meta key for keybindings (Windows ⊞/Command ⌘)</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="autoMagic">
                                 <input type="checkbox" option="autoMagic" id="autoMagic">
-                                Attempt to detect encoded data automagically
+                                <span data-i18n="options.auto_magic">Attempt to detect encoded data automagically</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="imagePreview">
                                 <input type="checkbox" option="imagePreview" id="imagePreview">
-                                Render a preview of the input if it's detected to be an image
+                                <span data-i18n="options.image_preview">Render a preview of the input if it's detected to be an image</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="syncTabs">
                                 <input type="checkbox" option="syncTabs" id="syncTabs">
-                                Keep the current tab in sync between the input and output
+                                <span data-i18n="options.sync_tabs">Keep the current tab in sync between the input and output</span>
                             </label>
                         </div>
 
                         <div class="checkbox option-item">
                             <label for="showCatCount">
                                 <input type="checkbox" option="showCatCount" id="showCatCount">
-                                Show the number of operations in each category
+                                <span data-i18n="options.show_cat_count">Show the number of operations in each category</span>
                             </label>
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" id="reset-options">Reset options to default</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-secondary" id="reset-options" data-i18n="options.reset">Reset options to default</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="options.close">Close</button>
                     </div>
                 </div>
             </div>
@@ -542,13 +549,13 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content" data-help-proxy="a[data-target='#catFavourites']">
                     <div class="modal-header">
-                        <h5 class="modal-title">Edit Favourites</h5>
+                        <h5 class="modal-title" data-i18n="ui.modal.edit_favourites">Edit Favourites</h5>
                     </div>
                     <div class="modal-body" id="favourites-body">
                         <ul>
-                            <li><span style="font-weight: bold">To add:</span> drag the operation over the favourites category and drop it</li>
-                            <li><span style="font-weight: bold">To reorder:</span> drag up and down in the list below</li>
-                            <li><span style="font-weight: bold">To remove:</span> hit the delete button or drag out of the list below</li>
+                            <li><span style="font-weight: bold" data-i18n="ui.favourites_modal.to_add">To add:</span> <span data-i18n="ui.favourites_modal.add_help">drag the operation over the favourites category and drop it</span></li>
+                            <li><span style="font-weight: bold" data-i18n="ui.favourites_modal.to_reorder">To reorder:</span> <span data-i18n="ui.favourites_modal.reorder_help">drag up and down in the list below</span></li>
+                            <li><span style="font-weight: bold" data-i18n="ui.favourites_modal.to_remove">To remove:</span> <span data-i18n="ui.favourites_modal.remove_help">hit the delete button or drag out of the list below</span></li>
                         </ul>
                         <br>
                         <ul id="edit-favourites-list" class="op-list"></ul>
@@ -556,9 +563,9 @@
                         </div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset-favourites">Reset favourites to default</button>
-                        <button type="button" class="btn btn-success" data-dismiss="modal" id="save-favourites">Save</button>
-                        <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" id="reset-favourites" data-i18n="ui.favourites_modal.reset">Reset favourites to default</button>
+                        <button type="button" class="btn btn-success" data-dismiss="modal" id="save-favourites" data-i18n="ui.favourites_modal.save">Save</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal" data-i18n="ui.favourites_modal.cancel">Cancel</button>
                     </div>
                 </div>
             </div>
@@ -716,10 +723,10 @@
                     </div>
                     <div class="modal-body" id="confirm-body"></div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" id="confirm-yes">
+                        <button type="button" class="btn btn-success" id="confirm-yes" data-i18n="ui.confirm.yes">
                             Yes
                         </button>
-                        <button type="button" class="btn btn-danger" id="confirm-no" data-dismiss="modal">
+                        <button type="button" class="btn btn-danger" id="confirm-no" data-dismiss="modal" data-i18n="ui.confirm.no">
                             No
                         </button>
                     </div>
@@ -731,35 +738,35 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Find Input Tab</h5>
+                        <h5 class="modal-title" data-i18n="ui.modal.find_input_tab">Find Input Tab</h5>
                     </div>
                     <div class="modal-body" id="input-tab-body">
-                        <h6>Load Status</h6>
+                        <h6 data-i18n="ui.find_tab.load_status">Load Status</h6>
                         <div id="input-find-options">
                             <ul id="input-find-options-checkboxes">
                                 <li class="checkbox input-find-option">
                                     <label for="input-show-pending">
                                         <input type="checkbox" id="input-show-pending" checked="">
-                                        Pending
+                                        <span data-i18n="ui.find_tab.pending">Pending</span>
                                     </label>
                                 </li>
                                 <li class="checkbox input-find-option">
                                     <label for="input-show-loading">
                                         <input type="checkbox" id="input-show-loading" checked="">
-                                        Loading
+                                        <span data-i18n="ui.find_tab.loading">Loading</span>
                                     </label>
                                 </li>
                                 <li class="checkbox input-find-option">
                                     <label for="input-show-loaded">
                                         <input type="checkbox" id="input-show-loaded" checked="">
-                                        Loaded
+                                        <span data-i18n="ui.find_tab.loaded">Loaded</span>
                                     </label>
                                 </li>
                             </ul>
                         </div>
                         <div class="form-group input-group">
                             <div class="toggle-string">
-                                <label for="input-filter" class="bmd-label-floating toggle-string">Filter (regex)</label>
+                                <label for="input-filter" class="bmd-label-floating toggle-string" data-i18n="ui.find_tab.filter">Filter (regex)</label>
                                 <input type="text" class="form-control toggle-string" id="input-filter">
                             </div>
                             <div class="input-group-append">
@@ -771,16 +778,16 @@
                             </div>
                         </div>
                         <div class="form-group input-find-option" id="input-num-results-container">
-                            <label for="input-num-results" class="bmd-label-floating">Number of results</label>
+                            <label for="input-num-results" class="bmd-label-floating" data-i18n="ui.find_tab.num_results">Number of results</label>
                             <input type="number" class="form-control" id="input-num-results" value="20" min="1">
                         </div>
                         <div style="clear:both"></div>
-                        <h6>Results</h6>
+                        <h6 data-i18n="ui.find_tab.results">Results</h6>
                         <ul id="input-search-results"></ul>
                     </div>
                     <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" id="input-filter-refresh">Refresh</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="input-filter-refresh" data-i18n="ui.find_tab.refresh">Refresh</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="ui.find_tab.close">Close</button>
                     </div>
                 </div>
             </div>
@@ -790,59 +797,59 @@
             <div class="modal-dialog modal-lg" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title">Find Output Tab</h5>
+                        <h5 class="modal-title" data-i18n="ui.modal.find_output_tab">Find Output Tab</h5>
                     </div>
                     <div class="modal-body" id="output-tab-body">
-                        <h6>Bake Status</h6>
+                        <h6 data-i18n="ui.find_tab.bake_status">Bake Status</h6>
                         <div id="output-find-options">
                             <ul id="output-find-options-checkboxes">
                                 <li class="checkbox output-find-option">
                                     <label for="output-show-pending">
                                         <input type="checkbox" id="output-show-pending" checked="">
-                                        Pending
+                                        <span data-i18n="ui.find_tab.pending">Pending</span>
                                     </label>
                                 </li>
                                 <li class="checkbox output-find-option">
                                     <label for="output-show-baking">
                                         <input type="checkbox" id="output-show-baking" checked="">
-                                        Baking
+                                        <span data-i18n="ui.find_tab.baking">Baking</span>
                                     </label>
                                 </li>
                                 <li class="checkbox output-find-option">
                                     <label for="output-show-baked">
                                         <input type="checkbox" id="output-show-baked" checked="">
-                                        Baked
+                                        <span data-i18n="ui.find_tab.baked">Baked</span>
                                     </label>
                                 </li>
                                 <li class="checkbox output-find-option">
                                     <label for="output-show-stale">
                                         <input type="checkbox" id="output-show-stale" checked="">
-                                        Stale
+                                        <span data-i18n="ui.find_tab.stale">Stale</span>
                                     </label>
                                 </li>
                                 <li class="checkbox output-find-option">
                                     <label for="output-show-errored">
                                         <input type="checkbox" id="output-show-errored" checked="">
-                                        Errored
+                                        <span data-i18n="ui.find_tab.errored">Errored</span>
                                     </label>
                                 </li>
                             </ul>
                             <div class="form-group output-find-option">
-                                <label for="output-content-filter" class="bmd-label-floating">Content filter (regex)</label>
+                                <label for="output-content-filter" class="bmd-label-floating" data-i18n="ui.find_tab.content_filter">Content filter (regex)</label>
                                 <input type="text" class="form-control" id="output-content-filter">
                             </div>
                             <div class="form-group output-find-option" id="output-num-results-container">
-                                <label for="output-num-results" class="bmd-label-floating">Number of results</label>
+                                <label for="output-num-results" class="bmd-label-floating" data-i18n="ui.find_tab.num_results">Number of results</label>
                                 <input type="number" class="form-control" id="output-num-results" value="20">
                             </div>
                         </div>
                         <br>
-                        <h6>Results</h6>
+                        <h6 data-i18n="ui.find_tab.results">Results</h6>
                         <ul id="output-search-results"></ul>
                     </div>
                     <div class="modal-footer">
-                            <button type="button" class="btn btn-primary" id="output-filter-refresh">Refresh</button>
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary" id="output-filter-refresh" data-i18n="ui.find_tab.refresh">Refresh</button>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal" data-i18n="ui.find_tab.close">Close</button>
                     </div>
                 </div>
             </div>
@@ -899,7 +906,7 @@
 
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary" id="help-ok" data-dismiss="modal">Ok</button>
+                        <button type="button" class="btn btn-primary" id="help-ok" data-dismiss="modal" data-i18n="ui.help.ok">Ok</button>
                     </div>
                 </div>
             </div>
